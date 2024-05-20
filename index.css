@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: rgb(139, 150, 160);
+}
+.color_picker{
+    width:600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+.section-title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #53484866;
+    
+}
+#color-display{
+    width:100%;
+    margin:0 auto;
+    height:100px;
+    background-color: #ddd;
+}
+
+.input-groupf{
+    margin-left: 135px;
+}
+.codes{
+    margin-right:5px;
+}
+.selected_color_code input[type="text"]{
+    width: 250px;
+    height: auto;
+    margin-top:5px;
+}
+button{
+    border:none;
+    color: rgb(168, 7, 7);
+    background-color: transparent;
+    
+}
+
+.toast-message{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    border: 1px solid #fff;
+    color : #fff;
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.toast-message-slide-in{
+    animation: toast-animation-in  0.3s ease-in;
+}
+.toast-message-slide-out{
+    animation: toast-animation-out  0.3s ease-in;
+}
+
+@keyframes toast-animation-in {
+    from{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes toast-animation-out {
+    from{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    
+}

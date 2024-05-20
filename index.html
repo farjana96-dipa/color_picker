@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <!--bootstrap css link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--style.css-->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="color_picker">
+    <section class="display">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title d-flex">
+                        <p>Display Color</p>
+                        <button id="rdColorBtn">Random Color</button>
+                    </div>
+                    <div id="color-display"></div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+
+    <section class="change_copy pt-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <p>Change & Copy Color</p>
+                        <button id="copyBtn">copy to clipboard</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 pt-3">
+                    <p>Select Copy Mode</p>
+                </div>
+                <div class="col-md-6 pt-3">
+                    <div class="select_copy_mode ">
+                        
+                        <div class="input-groupf d-flex mr-5">
+                            <div class="form-check pe-3">
+                                <input class="form-check-input hex-input" type="radio" name="color-mode" id="hex-mode" checked value="hex">
+                                <label class="form-check-label" for="hex-mode">
+                                  HEX
+                                </label>
+                              </div>
+                              <div class="form-check ">
+                                <input class="form-check-input rgb-input" type="radio" name="color-mode" id="rgb-mode" value="rgb">
+                                <label class="form-check-label" for="rgb-mode">
+                                  RGB
+                                </label>
+                              </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="selected_color_code">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="hex-codes input-group1">
+                            <label for="hex-code codes form-label">HEX</label>
+                            <input type="text" value="dddeee" placeholder="dddeee" class="hex-code-input form-control" id="hex-code" >
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="rgb-codes input-group1">
+                            <label for="rgb-code me-3 form-label codes">RGB</label>
+                            <input type="text" value="RGB(221,222,238)" placeholder="RGB(221,222,238)" class="rgb-code-input form-control" id="rgb-code" >
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+
+            <div class="adjust">
+                <div class="row">
+                    <div class="col-md-12 pt-3">
+                        <div class="section-title">
+                            <p>Adjust RGB Colors</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-md-4">
+                        <div class="label-group">
+                            <p>R</p>
+                            <p id="slide_red_label">221</p>
+                        </div>
+                        <div class="label-input-group">
+                            <input type="range" min="0" max="255" value="221" id="slide_red">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="label-group">
+                            <p>G</p>
+                            <p id="slide_green_label">221</p>
+                        </div>
+                        <div class="label-input-group">
+                            <input type="range" min="0" max="255" value="221" id="slide_green">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="label-group">
+                            <p>B</p>
+                            <p id="slide_blue_label">221</p>
+                        </div>
+                        <div class="label-input-group">
+                            <input type="range" min="0" max="255" value="221" id="slide_blue">
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </div>
+        
+    </section>
+</div>
+
+    <!--Bootstrap Js link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--Custom Js File-->
+    <script src="index.js"></script>
+</body>
+</html>
